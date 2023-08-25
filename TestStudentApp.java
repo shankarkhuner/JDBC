@@ -19,7 +19,7 @@ public class TestStudentApp {
 		em.getTransaction().begin();
 		
 		Student s1 = new Student();
-		s1.setPhoneNumber(911214445L);
+		s1.setPhoneNumber(91121L);
 		s1.setStudentName("Karan");
 		Address address = new Address();
 		address.setcity("Pune");
@@ -31,12 +31,14 @@ public class TestStudentApp {
 		c1.setCourseName("Java Fullstack");
 		c1.setCoursePrice(10000);
 		c1.setDuration(50);
+		c1.setStudent(s1);
 		
 		
 		Course c2 = new Course();
 		c2.setCourseName("React");
 		c2.setCoursePrice(17000);
 		c2.setDuration(35);
+		c2.setStudent(s1);
 		Set<Course> set=s1.getCourses();
 		
 		set.add(c1);

@@ -31,11 +31,9 @@ public class Student {
 	@JoinColumn(name="stud_address")
 	private Address Address;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	
+	@OneToMany(mappedBy="student",cascade=CascadeType.ALL)
 	private Set<Course> courses=new HashSet();
-	
-	
-	
 	
 	public Set<Course> getCourses() {
 		return courses;
